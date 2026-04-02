@@ -1,0 +1,7 @@
+Python/.venv
+**/__pycache__
+*.pyc
+.git
+.idea
+my_analytics_charts
+postgres-data
