@@ -27,6 +27,8 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - "8080:8080"
+    volumes:
+      - ./my_analytics_charts:/app/charts:ro
     depends_on:
       - db
     restart: unless-stopped
@@ -35,6 +37,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.ingestor
+    env_file:
+      - .env
     depends_on:
       - backend
     command: python Python/sender.py

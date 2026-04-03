@@ -1,0 +1,107 @@
+﻿  main.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(3742,35): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(4224,32): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(5552,32): warning C4244: '=': conversion from '__int64' to 'unsigned long', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(5572,32): warning C4244: '=': conversion from '__int64' to 'unsigned long', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7623,33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7642,48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7644,53): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7644,53): warning C4267:         with
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7644,53): warning C4267:         [
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7644,53): warning C4267:             _Ty=int
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7644,53): warning C4267:         ]
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7745,94): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7893,54): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7904,54): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7922,54): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7933,54): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(9606,48): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(9606,29): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(13450,53): warning C4267: '+=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(13461,45): warning C4267: '+=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(13715,47): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(13722,135): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(13783,111): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\main.cpp(15,26): error C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\main.cpp(150,32): error C4996: 'pqxx::transaction_base::exec_params': Use exec(std::string_view, params) instead.
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\main.cpp(160,15): error C4996: 'pqxx::transaction_base::exec_params': Use exec(std::string_view, params) instead.
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(11042,75): warning C4244: 'argument': conversion from 'unsigned __int64' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+      C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(11042,75):
+      the template instantiation context (the oldest one first) is
+          C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\main.cpp(136,21):
+          see reference to class template instantiation 'crow::Crow<>' being compiled
+          C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(14992,14):
+          while compiling class template member function 'void crow::Crow<>::run(void)'
+              C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\main.cpp(231,39):
+              see the first reference to 'crow::Crow<>::run' in 'main'
+          C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(15046,71):
+          see reference to class template instantiation 'crow::Server<crow::Crow<>,crow::TCPAcceptor,crow::SocketAdaptor>' being compiled
+          C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(11492,14):
+          while compiling class template member function 'void crow::Server<crow::Crow<>,crow::TCPAcceptor,crow::SocketAdaptor>::do_accept(void)'
+              C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(11406,22):
+              see the first reference to 'crow::Server<crow::Crow<>,crow::TCPAcceptor,crow::SocketAdaptor>::do_accept' in 'crow::Server<crow::Crow<>,crow::TCPAcceptor,crow::SocketAdaptor>::run'
+              C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(15053,33):
+              see the first reference to 'crow::Server<crow::Crow<>,crow::TCPAcceptor,crow::SocketAdaptor>::run' in 'crow::Crow<>::run'
+              C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\main.cpp(231,39):
+              see the first reference to 'crow::Crow<>::run' in 'main'
+          C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(11505,19):
+          see reference to class template instantiation 'crow::Connection<crow::SocketAdaptor,crow::Crow<>>' being compiled
+          C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(11033,14):
+          while compiling class template member function 'void crow::Connection<crow::SocketAdaptor,crow::Crow<>>::do_read(void)'
+              C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(10751,34):
+              see the first reference to 'crow::Connection<crow::SocketAdaptor,crow::Crow<>>::do_read' in 'crow::Connection<crow::SocketAdaptor,crow::Crow<>>::start::<lambda_1>::operator ()'
+  
+C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7373,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+      C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7373,25):
+      the template instantiation context (the oldest one first) is
+          C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(11161,32):
+          see reference to class template instantiation 'crow::HTTPParser<crow::Connection<crow::SocketAdaptor,crow::Crow<>>>' being compiled
+          C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(7357,14):
+          while compiling class template member function 'bool crow::HTTPParser<crow::Connection<crow::SocketAdaptor,crow::Crow<>>>::feed(const char *,int)'
+              C:\PROGA\CODS\Real-Time-Crypto-Analytics\Real-Time-Crypto-Analytics\crow_all.h(11042,32):
+              see the first reference to 'crow::HTTPParser<crow::Connection<crow::SocketAdaptor,crow::Crow<>>>::feed' in 'crow::Connection<crow::SocketAdaptor,crow::Crow<>>::do_read::<lambda_1>::operator ()'
+  
