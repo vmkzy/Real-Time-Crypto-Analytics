@@ -3,13 +3,13 @@
 ---
 
 ## 📌 Особенности
-- Docker, PostgreSQL, Binance API
+- Docker, PostgreSQL, Binance API, Crow
 
 ## 💻 Стек технологий
 
-- **Язык:** Python 3.9 / C++ 17
+- **Язык:** Python 3.9 / C++ 17 / HTML
 - **Библиотеки:** Pandas, Scikit-learn, Cctx, Matplotlib
-- **Инструменты:** Git, VS, PyCharm, Docker
+- **Инструменты:** Git, VS, PyCharm, Docker, Crow
 
 ## ⚙️ Установка и запуск
 
@@ -22,7 +22,7 @@
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/vmkzy/Real-Time-Crypto-Analytics.git
-   cd название_проекта
+   cd ПУТЬ/название_проекта
    docker-compose up --build
    ```
 2. Откройте в браузере: 'http://localhost:8080/dashboard'
