@@ -85,19 +85,20 @@ double json_price(const crow::json::rvalue& j) {
 
 crow::response dashboard_page(pqxx::result const& res) {
     std::ostringstream html;
-    html << "<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='refresh' content='15'>"
-            "<title>Live Crypto</title>"
+    html << "<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='refresh' content='1'>"
+            "<title>Live Crypto Dashboard</title>"
             "<style>"
             "body{font-family:sans-serif;background:#121212;color:#fff;text-align:center;padding-top:50px;}"
             "table{margin:auto;width:80%;border-collapse:collapse;background:#1e1e1e;"
             "box-shadow:0 4px 15px rgba(0,0,0,0.5);}"
             "th,td{padding:15px;border:1px solid #333;}"
             "th{background:#252525;color:#aaa;text-transform:uppercase;font-size:12px;}"
-            ".charts{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin:40px auto 80px;max-width:1200px;}"
-            ".chart-card{background:#1a1a1a;padding:16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.35);}"
-            ".chart-img{max-width:min(480px,92vw);height:auto;border-radius:8px;display:block;margin-top:8px;}"
+            ".topbar{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}"
+            ".navlink{display:inline-block;padding:10px 16px;border-radius:999px;background:#2a2a2a;color:#fff;text-decoration:none;font-weight:bold;}"
+            ".navlink:hover{background:#3a3a3a;}"
             "</style></head><body>"
             "<h1>Live Crypto Monitor</h1>"
+            "<div class='topbar'><a class='navlink' href='/dashboard'>Table</a><a class='navlink' href='/charts-view'>Charts</a></div>"
             "<table><tr><th>Ticker</th><th>Price</th><th>Average</th><th>Status</th></tr>";
 
     for (auto const& row : res) {
@@ -118,14 +119,36 @@ crow::response dashboard_page(pqxx::result const& res) {
     if (res.empty())
         html << "<p style='color:#666;margin-top:20px;'>Waiting for data from ingestor...</p>";
 
-    html << "<h2 style='margin-top:48px;color:#bbb;font-size:1.1rem;'>Charts</h2>"
-            "<p style='color:#666;font-size:14px;'>Refreshes with the page.</p>"
+    html << "</body></html>";
+    return crow::response(html.str());
+}
+
+crow::response charts_page() {
+    std::ostringstream html;
+    html << "<!DOCTYPE html><html><head><meta charset='utf-8'>"
+            "<title>Live Crypto Charts</title>"
+            "<style>"
+            "body{font-family:sans-serif;background:#121212;color:#fff;margin:0;padding:32px 20px 64px;}"
+            "h1{text-align:center;margin:0 0 10px;}"
+            ".subtitle{text-align:center;color:#888;margin:0 0 24px;}"
+            ".topbar{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 0 28px;}"
+            ".navlink{display:inline-block;padding:10px 16px;border-radius:999px;background:#2a2a2a;color:#fff;text-decoration:none;font-weight:bold;}"
+            ".navlink:hover{background:#3a3a3a;}"
+            ".charts{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;max-width:1200px;margin:0 auto;}"
+            ".chart-card{background:#1a1a1a;padding:16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.35);}"
+            ".chart-img{max-width:min(480px,92vw);height:auto;border-radius:8px;display:block;margin-top:8px;}"
+            "</style></head><body>"
+            "<h1>Live Crypto Charts</h1>"
+            "<p class='subtitle'>This page stays static so the charts are easier to inspect.</p>"
+            "<div class='topbar'><a class='navlink' href='/dashboard'>Table</a><a class='navlink' href='/charts-view'>Charts</a></div>"
             "<div class='charts'>";
+
     for (std::string const& sym : load_tickers()) {
         std::string fname = chart_filename_for_symbol(sym);
         html << "<div class='chart-card'><p style='color:#cfcfcf;font-weight:bold;margin:0 0 4px;'>" << sym
              << "</p><img class='chart-img' src='/charts/" << fname << "' alt='" << sym << "' loading='lazy' /></div>";
     }
+
     html << "</div></body></html>";
     return crow::response(html.str());
 }
@@ -212,6 +235,10 @@ int main() {
         catch (const std::exception& e) {
             return crow::response(500, std::string("DB Error: ") + e.what());
         }
+    });
+
+    CROW_ROUTE(app, "/charts-view")([]() {
+        return charts_page();
     });
 
     CROW_ROUTE(app, "/charts/<string>")([](std::string const& name) {
